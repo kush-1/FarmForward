@@ -24,6 +24,16 @@ app.post("/api/farms", async (req,res)=> {
     }
 });
 
+app.delete("/api/farms/:id", async (req,res)=> {
+    const {id} = req.params;
+    try {
+        await Farm.findByIdAndDelete(id);
+        res.status(200).json({success: true, message: "Farm deleted."});
+    } catch (error) {
+        res.status(404).json({success: false, message: "Farm not found."});
+    }
+});
+
 app.listen(3000, () => {
     connectDB();
     console.log('Server is running on port 3000');
