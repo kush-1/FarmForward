@@ -25,4 +25,4 @@ router.put("/:id", authMiddleware, updateFarm);
 // Route to delete a specific farm (protected route)
 router.delete("/:id", authMiddleware, deleteFarm);
 
-module.exports = router;
+export default router;

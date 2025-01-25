@@ -19,4 +19,4 @@ router.get('/profile', protect, getUserProfile);           // Route to get the l
 router.put('/profile', protect, updateUserProfile);        // Route to update the logged-in user's profile
 router.get('/', protect, getAllUsers);                     // Admin-only route to get all users (requires extra logic in middleware)
 
-module.exports = router;
+export default router;
