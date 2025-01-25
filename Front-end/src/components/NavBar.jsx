@@ -1,10 +1,13 @@
-import { Container, Button, HStack, Flex, Text} from '@chakra-ui/react';
+import { Container, Button, HStack, Flex, Text, useColorMode} from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 import { PlusSquareIcon } from "@chakra-ui/icons";
+import { LuCarrot } from "react-icons/lu";
+import { FaCarrot } from "react-icons/fa";
 
 const NavBar = () => {
+    const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Container maxW = {"1140px"} px = {4}>
+        <Container maxW = {"600px"} px = {4}>
             <Flex
                 h = {16}
                 alignItems = {"center"}
@@ -23,7 +26,7 @@ const NavBar = () => {
                     fontWeight={ "bold" }
                     >
                     
-                    <Link to = { "/" }> Farms </Link>
+                    <Link to = { "/" }> FarmForward </Link>
 
                 </Text>
 
@@ -33,6 +36,9 @@ const NavBar = () => {
                             <PlusSquareIcon fontSize = {20} />
                         </Button>
                     </Link>
+                    <Button onClick = { toggleColorMode }> {colorMode === "light" ? <FaCarrot /> :
+                        <LuCarrot size = "20" />}
+                    </Button>
                 </HStack>
             </Flex>
         </Container>
