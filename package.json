@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/NS977255/HoyaHackathon.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
