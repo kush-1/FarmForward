@@ -53,4 +53,3 @@ The platform aims to:
 - **Frontend**: React.js – A JavaScript library for building user interfaces.
 - **Backend**: Node.js with Express – A JavaScript runtime and web application framework for building the server-side of the app.
 - **Database**: MongoDB – A NoSQL database used for storing user profiles, farm listings, and related data.
-- **Authentication**: JWT (JSON Web Tokens) – For secure user authentication and authorization.
