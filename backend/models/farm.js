@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
 const farmSchema = new mongoose.Schema({
   name: {
@@ -13,11 +13,18 @@ const farmSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  image: {
+    type: String,
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User", // Relates to the User model
     required: true,
   },
+  timestamps: true
 });
 
-module.exports = mongoose.model("Farm", farmSchema);
+const Farm = mongoose.model('Farm', farmSchema);
+
+export default Farm;
