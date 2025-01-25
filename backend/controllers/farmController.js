@@ -1,4 +1,5 @@
 import Farm from "../models/farm.js";
+import mongoose from 'mongoose';
 
 export const getFarms = async (req, res)=> {
   try {
