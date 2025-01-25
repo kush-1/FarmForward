@@ -9,8 +9,8 @@ farmforward.club
 
 - **Kush Desai**: [Fullstack Developer, Project Manager, and Branding Specialist]
 - **Nishchay Arjyal**: [Backend Developer, Project Leader, and Database Architect]
-- **Nick Santone**: [Frontend Developer, Debugging Specialist, and UI/UX Strategist]
-- **James Park**: [Frontend Developer, Graphic Design Specialist, and Creative Lead]
+- **Nick Santone**: [Frontend Developer, UI/UX Strategist, and Debugging Specialist]
+- **James Park**: [Frontend Developer, Creative Lead, and Graphic Design Specialist]
 
 ---
 
