@@ -22,6 +22,9 @@ const farmSchema = new mongoose.Schema({
     ref: "User", // Relates to the User model
     required: true,
   },
+  timestamps: true
 });
 
-module.exports = mongoose.model("Farm", farmSchema);
+const Farm = mongoose.model('Farm', farmSchema);
+
+export default Farm;
