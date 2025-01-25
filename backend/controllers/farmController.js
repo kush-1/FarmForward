@@ -1,37 +1,61 @@
-import Farm from ("../models/farm");
+import Farm from "../models/farm.js";
+import mongoose from 'mongoose';
 
-// Add a new farm
-exports.addFarm = async (req, res) => {
+export const getFarms = async (req, res)=> {
   try {
-    const { name, location, size, owner } = req.body;
-
-    const farm = new Farm({ name, location, size, owner });
-    await farm.save();
-
-    res.status(201).json({ message: "Farm added successfully", farm });
+      const farms = await Farm.find({});
+      res.status(200).json({success: true, data: farms});
   } catch (error) {
-    res.status(500).json({ message: "Error adding farm", error });
+      console.log("Error fetching farms:", error.message);
+      res.status(500).json({success:false,message:"Server Error"});
   }
-};
+}
 
-// Get all farms
-exports.getFarms = async (req, res) => {
+export const createFarm = async (req,res)=> {
+  const farm = req.body;
+
+  if(!farm.name || !farm.location || !farm.size || !farm.image){
+      return res.status(400).json({success:false, message: "Please provide all the required fields."});
+  }
+
+  const newFarm = new Farm(farm);
+
   try {
-    const farms = await Farm.find();
-    res.status(200).json(farms);
+      await newFarm.save();
+      res.status(201).json({success: true, data: newFarm});
   } catch (error) {
-    res.status(500).json({ message: "Error fetching farms", error });
+      console.error("Error creating the farm:",error.message);
+      res.status(500).json({success: false, message: "Server Error"});
   }
-};
+}
 
-// Delete a farm
-exports.deleteFarm = async (req, res) => {
+export const updateFarm = async (req,res)=> {
+  const {id} = req.params;
+  const farm = req.body;
+
+  if(!mongoose.Types.ObjectId.isValid(id)){
+      return res.status(404).json({success: false, message: "Farm not found."});
+  }
+
   try {
-    const { id } = req.params;
-
-    await Farm.findByIdAndDelete(id);
-    res.status(200).json({ message: "Farm deleted successfully" });
+      const updatedFarm = await Farm.findByIdAndUpdate(id, farm,{new:true});
+      res.status(200).json({success: true, data: updatedFarm});
   } catch (error) {
-    res.status(500).json({ message: "Error deleting farm", error });
+      console.log("Error deleting farm:",error.message);
+      res.status(500).json({success: false, message: "Server Error."});
   }
-};
+}
+
+export const deleteFarm = async (req,res)=> {
+  const {id} = req.params;
+  if(!mongoose.Types.ObjectId.isValid(id)){
+    return res.status(404).json({success: false, message: "Farm not found."});
+}
+  try {
+      await Farm.findByIdAndDelete(id);
+      res.status(200).json({success: true, message: "Farm deleted."});
+  } catch (error) {
+      console.log("Error deleting farm:",error.message);
+      res.status(500).json({success: false, message: "Server Error."});
+  }
+}
