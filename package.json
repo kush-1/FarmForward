@@ -1,6 +1,37 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "bootstrap": "^5.3.3",
     "react-bootstrap": "^2.10.8"
+=======
+  "name": "hoyahackathon",
+  "version": "1.0.0",
+  "description": "farmforward.life",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NS977255/HoyaHackathon.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NS977255/HoyaHackathon/issues"
+  },
+  "homepage": "https://github.com/NS977255/HoyaHackathon#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+>>>>>>> 0baa0b9ad38f021c6f3da3ee44fc5090c0646881
   }
 }
