@@ -48,11 +48,14 @@ export const updateFarm = async (req,res)=> {
 
 export const deleteFarm = async (req,res)=> {
   const {id} = req.params;
+  if(!mongoose.Types.ObjectId.isValid(id)){
+    return res.status(404).json({success: false, message: "Farm not found."});
+}
   try {
       await Farm.findByIdAndDelete(id);
       res.status(200).json({success: true, message: "Farm deleted."});
   } catch (error) {
       console.log("Error deleting farm:",error.message);
-      res.status(404).json({success: false, message: "Farm not found."});
+      res.status(500).json({success: false, message: "Server Error."});
   }
 }
