@@ -1,4 +1,4 @@
-import Farm from ("../models/farm.js");
+import Farm from "../models/farm.js";
 
 export const getFarms = async (req, res)=> {
   try {
