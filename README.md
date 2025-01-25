@@ -7,9 +7,9 @@ farmforward.life
 
 ## Team Members
 
-- **Nick Santone**: [Frontent Developer]
+- **Kush Desai**: [Fullstack Developer]
+- **Nick Santone**: [Frontend Developer]
 - **James Park**: [Frontend Developer]
-- **Kush Desai**: [Backend Developer]
 - **Nishchay Arjyal**: [Backend Developer]
 
 ---
