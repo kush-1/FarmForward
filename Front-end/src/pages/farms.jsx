@@ -14,9 +14,9 @@ const Farms = () => {
   }, []);
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-2xl font-bold mb-4">Available Farms</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div>
+      <h1>Available Farms</h1>
+      <div>
         {farms.length > 0 ? (
           farms.map((farm) => <FarmCard key={farm.id} farm={farm} />)
         ) : (
