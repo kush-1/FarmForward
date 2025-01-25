@@ -1,28 +1,61 @@
 import express from 'express';
-const {
-  createFarm,
-  getAllFarms,
-  getFarmById,
-  updateFarm,
-  deleteFarm,
-} = require("../controllers/farmController");
-const authMiddleware = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
-// Route to create a new farm (protected route)
-router.post("/", authMiddleware, createFarm);
+router.get("/api/farms", async (req, res)=> {
+  try {
+      const farms = await Farm.find({});
+      res.status(200).json({success: true, data: farms});
+  } catch (error) {
+      console.log("Error fetching farms:", error.message);
+      res.status(500).json({success:false,message:"Server Error"});
+  }
+});
 
-// Route to get all farms
-router.get("/", getAllFarms);
+router.post("/api/farms", async (req,res)=> {
+  const farm = req.body;
 
-// Route to get a specific farm by ID
-router.get("/:id", getFarmById);
+  if(!farm.name || !farm.location || !farm.size || !farm.image){
+      return res.status(400).json({success:false, message: "Please provide all the required fields."});
+  }
 
-// Route to update a specific farm (protected route)
-router.put("/:id", authMiddleware, updateFarm);
+  const newFarm = new Farm(farm);
 
-// Route to delete a specific farm (protected route)
-router.delete("/:id", authMiddleware, deleteFarm);
+  try {
+      await newFarm.save();
+      res.status(201).json({success: true, data: newFarm});
+  } catch (error) {
+      console.error("Error creating the farm:",error.message);
+      res.status(500).json({success: false, message: "Server Error"});
+  }
+});
+
+router.put("/api/farms/:id", async (req,res)=> {
+  const {id} = req.params;
+  const farm = req.body;
+
+  if(!mongoose.Types.ObjectId.isValid(id)){
+      return res.status(404).json({success: false, message: "Farm not found."});
+  }
+
+  try {
+      const updatedFarm = await Farm.findByIdAndUpdate(id, farm,{new:true});
+      res.status(200).json({success: true, data: updatedFarm});
+  } catch (error) {
+      console.log("Error deleting farm:",error.message);
+      res.status(500).json({success: false, message: "Server Error."});
+  }
+});
+
+router.delete("/api/farms/:id", async (req,res)=> {
+  const {id} = req.params;
+  try {
+      await Farm.findByIdAndDelete(id);
+      res.status(200).json({success: true, message: "Farm deleted."});
+  } catch (error) {
+      console.log("Error deleting farm:",error.message);
+      res.status(404).json({success: false, message: "Farm not found."});
+  }
+});
 
 export default router;
