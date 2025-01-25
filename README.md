@@ -1,4 +1,5 @@
 # FarmForward
+farmforward.life
 
 **FarmForward** is a web application designed to help farm owners who no longer wish to continue managing their land find suitable successors. The platform connects farm owners looking to pass on their land with individuals who are interested in inheriting or managing a farm. Our goal is to ensure that valuable farmland remains in operation, supporting sustainable farming practices, and fostering a new generation of farmers.
 
@@ -6,9 +7,9 @@
 
 ## Team Members
 
-- **Nick Santone**: [Frontent Developer]
+- **Kush Desai**: [Fullstack Developer]
+- **Nick Santone**: [Frontend Developer]
 - **James Park**: [Frontend Developer]
-- **Kush Desai**: [Backend Developer]
 - **Nishchay Arjyal**: [Backend Developer]
 
 ---
