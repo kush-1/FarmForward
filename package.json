@@ -1,0 +1,24 @@
+{
+  "name": "hoyahackathon",
+  "version": "1.0.0",
+  "description": "farmforward.life",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NS977255/HoyaHackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NS977255/HoyaHackathon/issues"
+  },
+  "homepage": "https://github.com/NS977255/HoyaHackathon#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
