@@ -1,4 +1,4 @@
-const Farm = require("../models/farm");
+import Farm from ("../models/farm");
 
 // Add a new farm
 exports.addFarm = async (req, res) => {
