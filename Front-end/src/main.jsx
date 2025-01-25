@@ -1,7 +1,7 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import { ChakraProvider } from '@chakra-ui/react'
+import React from 'react'
+import ReactDOM from "react-dom/client";
+import App from './App.jsx';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const rootElement = document.getElementById('root')
 ReactDOM.createRoot(rootElement).render(
@@ -9,5 +9,5 @@ ReactDOM.createRoot(rootElement).render(
     <ChakraProvider>
       <App />
     </ChakraProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
