@@ -42,6 +42,7 @@ const CreateFarmPage = () => {
         <Container maxW={"container.sm"}>
             <VStack spacing={8}>
                 <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={20}>
+                <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={20}>
                     Create New Farm Listing
                 </Heading>
 
