@@ -1,4 +1,4 @@
-import { Text, Box } from "@chakra-ui/react"
+import { Text, Box, Image } from "@chakra-ui/react"
 
 const AboutPage = () => {
     return (
@@ -29,6 +29,13 @@ const AboutPage = () => {
                     relationships that safeguard the transfer of farmland and foster sustainable food <br />
                     systems vital to the health and well-being of communities worldwide.
                 </Text>
+            </Box>
+
+            <Box height = {"300"} w = {"300"} align = {"center"} paddingTop = {12}>
+                <Image height="350px" 
+                    align = "center"
+                    src="https://agrilinks.org/sites/default/files/styles/featured/public/media/image/CRSF2F_TimorLeste_CDC.webp?h=10d202d3"
+                />
             </Box>
         </Box>
     );
