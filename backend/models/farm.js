@@ -10,6 +10,10 @@ const farmSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    type: {
+      type: String,
+      required: true,
+    },
     size: {
       type: Number,
       required: true,
@@ -18,11 +22,14 @@ const farmSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    // owner: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: "User", // Relates to the User model
-    //   required: true,
-    // },
+    phone: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    }
   },
   {timestamps: true}
 );

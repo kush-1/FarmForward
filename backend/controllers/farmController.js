@@ -14,7 +14,7 @@ export const getFarms = async (req, res)=> {
 export const createFarm = async (req,res)=> {
   const farm = req.body;
 
-  if(!farm.name || !farm.location || !farm.size || !farm.image){
+  if(!farm.name || !farm.location || !farm.size || !farm.image || !farm.type || !farm.phone || !farm.email){
       return res.status(400).json({success:false, message: "Please provide all the required fields."});
   }
 

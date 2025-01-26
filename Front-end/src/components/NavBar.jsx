@@ -1,7 +1,7 @@
 import { Container, Button, HStack, Flex, Text, useColorMode} from '@chakra-ui/react';
 import { Link } from "react-router-dom";
 import { LuCarrot } from "react-icons/lu";
-import { FaCarrot, FaPlusSquare } from "react-icons/fa";
+import { FaCarrot } from "react-icons/fa";
 
 const NavBar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -32,7 +32,6 @@ const NavBar = () => {
                 <HStack spacing = { 3 } alignItems = { "right" }>
                     <Link to = { "/create" }>
                         <Button>
-                            <FaPlusSquare fontSize={20}/>
                             <Text 
                                 fontSize = {18}
                                 bgGradient='linear(to-l,rgb(131, 154, 69), #a7d93d)'
