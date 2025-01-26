@@ -16,7 +16,7 @@ const AboutPage = () => {
             <Box height = {"300"} w = {"300"} align = {"center"} paddingTop = {12}>
                 <Image height="350px" 
                     align = "center"
-                    href="/ff-logo.webp"
+                    src="/ff-logo.webp"
                 />
             </Box>
 
