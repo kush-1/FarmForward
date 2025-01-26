@@ -7,14 +7,29 @@ export const useFarmStore = create((set) => ({
         if (!newFarm.name || !newFarm.location || !newFarm.size || !newFarm.image || !newFarm.type || !newFarm.phone || !newFarm.email) {
             return { success: false, message: "Please fill in all the fields." }
         }
-        const res = await fetch("/api/farms", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newFarm),
-        })
-        const data = await res.json();
-        set((state) => ({ farms: [...state.farms, data.data] }));
-        return { success: true, message: "Farm successfully created." }
+        try {
+			const res = await fetch("/api/farms", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(newFarm),
+			});
+
+			if (!res.ok) {
+				// Server returned an error status code
+				const errorData = await res.text(); // Get the error message as text
+				console.error("Server error:", res.status, errorData);
+				return { success: false, message: `Server Error: ${res.status}, ${errorData}` };
+			}
+
+			const data = await res.json();
+			set((state) => ({ farms: [...state.farms, data.data] }));
+			return { success: true, message: "Farm successfully created." }
+
+		} catch (error) {
+			// Network error or parsing error
+			console.error("Fetch error:", error);
+			return { success: false, message: "An error occurred while creating the farm." };
+		}
     },
     fetchFarms: async ()=>{
         const res = await fetch("/api/farms");

@@ -17,7 +17,8 @@ const CreateFarmPage = () => {
     const toast = useToast();
 
     const { createFarm } = useFarmStore()
-    const handleAddFarm = async () => {
+    const handleAddFarm = async (e) => {
+        e.preventDefault();
         const { success, message } = await createFarm(newFarm)
         if (!success) {
             toast({
@@ -71,6 +72,7 @@ const CreateFarmPage = () => {
                         <Input
                                 placeholder="Size"
                                 name="size"
+                                type = "number"
                                 value={newFarm.size}
                                 onChange={(e) => setNewFarm({ ...newFarm, size: e.target.value })}
                             />
