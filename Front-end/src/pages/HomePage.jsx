@@ -17,7 +17,7 @@ const HomePage = () => {
                 <Text
                     fontSize={"30"}
                     fontWeight={"bold"}
-                    bgGradient={"linear(to-r, cyan.400, blue.500)"}
+                    bgGradient={"linear(to-r, yellow.400, green.600)"}
                     bgClip={"text"}
                     textAlign={"center"}
                 >
@@ -40,7 +40,7 @@ const HomePage = () => {
                     <Text fontSize='xl' textAlign={"center"} fontWeight='bold' color='gray.500'>
                         No farms found {" "}
                         <Link to={"/create"}>
-                            <Text as='span' color='blue.500' _hover={{ textDecoration: "underline" }}>
+                            <Text as='span' color='green.600' _hover={{ textDecoration: "underline" }}>
                                 Create a farm listing
                             </Text>
                         </Link>
@@ -48,7 +48,7 @@ const HomePage = () => {
                 )}
             </VStack>
         </Container>
-    )
-}
+    );
+};
 
-export default HomePage
+export default HomePage;

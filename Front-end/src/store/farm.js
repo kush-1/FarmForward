@@ -10,7 +10,7 @@ export const useFarmStore = create((set) => ({
         const res = await fetch("/api/farms", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(newFarm)
+            body: JSON.stringify(newFarm),
         })
         const data = await res.json();
         set((state) => ({ farms: [...state.farms, data.data] }));
