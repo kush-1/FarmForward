@@ -93,7 +93,23 @@ const FarmCard = ({ farm }) => {
                 </Heading>
 
                 <Text fontWeight='bold' fontSize='xl' color={textColor} mb={4}>
+                    {farm.location}
+                </Text>
+
+                <Text fontWeight='bold' fontSize='xl' color={textColor} mb={4}>
+                    {farm.type} 
+                </Text>
+
+                <Text fontWeight='bold' fontSize='xl' color={textColor} mb={4}>
                     {farm.size} Acres
+                </Text>
+
+                <Text fontWeight='bold' fontSize='xl' color={textColor} mb={4}>
+                    {farm.phone}
+                </Text>
+
+                <Text fontWeight='bold' fontSize='xl' color={textColor} mb={4}>
+                    {farm.email}
                 </Text>
 
                 <HStack spacing={2}>

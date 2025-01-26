@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Container, Heading, Input, useColorModeValue, VStack, useToast } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Input, Link, useColorModeValue, Text, VStack, useToast } from "@chakra-ui/react";
 import { useFarmStore } from "../store/farm";
 
 
@@ -44,6 +44,20 @@ const CreateFarmPage = () => {
             <VStack spacing={8}>
                 <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={20}>
                     Create New Farm Listing
+                </Heading>
+
+                <Heading as = {"h2"} size = {"2xl"} textAlign = {"center"} mb = {5}>
+                    <Link to = { "/" }>
+                        <Button>
+                            <Text 
+                                fontSize = {18}
+                                bgGradient='linear(to-r,yellow.500, green.600)'
+                                bgClip = { 'text' }>
+
+                                Browse Farms
+                            </Text>
+                        </Button>
+                    </Link>
                 </Heading>
 
                 <Box

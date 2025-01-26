@@ -26,8 +26,8 @@ const HomePage = () => {
                 <SimpleGrid
                     columns={{
                         base: 1,
-                        md: 2,
-                        lg: 3,
+                        md: 1,
+                        lg: 2,
                     }}
                     spacing={10}
                     w={"full"}
