@@ -23,18 +23,19 @@ const NavBar = () => {
                     textAlign = { "center" }
                     fontSize={{ base: "50", sm: "64" }}
                     fontWeight={ "bold" }
+                    paddingRight = "6"
                     >
                     
                     <Link to = { "/" }> FarmForward </Link>
 
                 </Text>
 
-                <HStack spacing = { 3 } alignItems = { "right" }>
+                <HStack spacing = { 3 } alignItems = { "right" } paddingTop = "2">
                     <Link to = { "/create" }>
                         <Button>
                             <Text 
                                 fontSize = {18}
-                                bgGradient='linear(to-l,rgb(131, 154, 69), #a7d93d)'
+                                bgGradient='linear(to-r,yellow.500, green.600)'
                                 bgClip = { 'text' }>
 
                                 New
@@ -45,7 +46,7 @@ const NavBar = () => {
                         <Button>
                             <Text 
                                 fontSize = {18}
-                                bgGradient='linear(to-l,rgb(131, 154, 69), #a7d93d)'
+                                bgGradient='linear(to-r,yellow.500, green.600)'
                                 bgClip = { 'text' }>
 
                                 About

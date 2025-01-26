@@ -7,8 +7,8 @@ farmforward.club
 
 ## Team Members
 
+- **Nishchay Arjyal**: [Fullstack Developer, Technical Lead, and Database Architect]
 - **Kush Desai**: [Fullstack Developer, Project Manager, and Branding Specialist]
-- **Nishchay Arjyal**: [Backend Developer, Project Leader, and Database Architect]
 - **Nick Santone**: [Frontend Developer, UI/UX Strategist, and Debugging Specialist]
 - **James Park**: [Frontend Developer, Creative Lead, and Graphic Design Specialist]
 
@@ -34,7 +34,7 @@ The platform aims to:
 1. **User Profiles**: Both farm owners and prospective farmers can create detailed profiles showcasing their background, interests, and farm preferences.
 2. **Farm Listings**: Farm owners can list available farms, describing the land, the crops or livestock it supports, and their reasons for passing it on.
 3. **Search and Matchmaking**: Prospective farmers can search for farms that fit their needs based on location, type of farming, and other key factors.
-4. **Communication Tools**: Secure messaging and notifications to allow farm owners and prospective farmers to communicate directly.
+4. **Communication Tools**: Allow farm owners and prospective farmers to communicate directly.
 5. **Database Management**: All farm listings and user information will be stored securely in a MongoDB database, ensuring data integrity and easy management.
 
 ---
