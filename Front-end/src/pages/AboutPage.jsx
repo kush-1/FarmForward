@@ -16,7 +16,7 @@ const AboutPage = () => {
             <Box height = {"300"} w = {"300"} align = {"center"} paddingTop = {12}>
                 <Image height="350px" 
                     align = "center"
-                    src="/ff-logo.webp"
+                    src="https://media.discordapp.net/attachments/1283146195849449636/1333070815108792370/Screenshot_2025-01-25_at_6.13.57_PM-removebg-preview_1.png?ex=67978e71&is=67963cf1&hm=ae431294c19bcdb579ecd8c919122e06ebc9818c63b0a80a308ea7ba7e347a0d&=&format=webp&quality=lossless"
                 />
             </Box>
 
