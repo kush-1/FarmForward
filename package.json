@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node backend/server.js",
-    "dev": "SET NODE_ENV=development & nodemon backend/server.js",
+    "dev": "NODE_ENV=development nodemon backend/server.js",
     "build":"npm install && npm install --prefix Front-end && npm run build --prefix Front-end",
     "start":"NODE_ENV=production node backend/server.js"
   },
