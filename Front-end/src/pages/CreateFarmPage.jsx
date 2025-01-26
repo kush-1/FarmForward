@@ -19,12 +19,12 @@ const CreateFarmPage = () => {
     return (
         <Container maxW={"container.sm"}>
             <VStack spacing={8}>
-                <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={8}>
+                <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={20}>
                     Create New Farm Listing
                 </Heading>
 
                 <Box 
-                    w={"full"} bg={useColorModeValue("white","5d6841")}
+                    w={"full"} bg={useColorModeValue("","green.800")}
                     p={6} founded={"lg"} shadow={"md"}    
                 >
                     <VStack spacing={4}>
@@ -71,7 +71,7 @@ const CreateFarmPage = () => {
                             value = {newFarm.email}
                             onChange = {(e) => setNewFarm({ ...newFarm, email: e.target.value})}
                         />
-                        <Button colorScheme="blue" onClick={handleAddFarm} w="full">
+                        <Button colorScheme="green" onClick={handleAddFarm} w="full">
                             Add Farm
                         </Button>
                     </VStack>
