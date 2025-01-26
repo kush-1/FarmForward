@@ -13,6 +13,13 @@ const AboutPage = () => {
                 Our Mission
             </Text>
 
+            <Box height = {"300"} w = {"300"} align = {"center"} paddingTop = {12}>
+                <Image height="350px" 
+                    align = "center"
+                    href="/ff-logo.webp"
+                />
+            </Box>
+
             <Box paddingTop = "5">
                 <Text 
                     fontSize = {"22"}
