@@ -5,8 +5,11 @@ const CreateFarmPage = () => {
     const [newFarm, setNewFarm] = useState({
         name: "",
         location: "",
-        size: "",
+        type: "",
+        acreage: "",
         image: "",
+        phone: "",
+        email: "",
     });
 
     const handleAddFarm = () => {
@@ -21,7 +24,7 @@ const CreateFarmPage = () => {
                 </Heading>
 
                 <Box 
-                    w={"full"} bg={useColorModeValue("white","gray.800")}
+                    w={"full"} bg={useColorModeValue("white","5d6841")}
                     p={6} founded={"lg"} shadow={"md"}    
                 >
                     <VStack spacing={4}>
@@ -37,17 +40,36 @@ const CreateFarmPage = () => {
                             value={newFarm.location}
                             onChange={(e)=>setNewFarm({...newFarm, location: e.target.value})}
                         />
+                        <Input
+                            placeholder = "Type"
+                            name = "type"
+                            value = {newFarm.type}
+                            onChange = {(e) => setNewFarm({ ...newFarm, location: e.target.value})}
+                        />
                         <Input 
-                            placeholder="Size"
-                            name="size"
-                            value={newFarm.size}
-                            onChange={(e)=>setNewFarm({...newFarm, size: e.target.value})}
+                            placeholder="Acreage"
+                            name="acreage"
+                            type = 'number'
+                            value={newFarm.acreage}
+                            onChange={(e)=>setNewFarm({...newFarm, acreage: e.target.value})}
                         />
                         <Input 
                             placeholder="Image URL"
                             name="image"
                             value={newFarm.image}
                             onChange={(e)=>setNewFarm({...newFarm, image: e.target.value})}
+                        />
+                        <Input
+                            placeholder = "Phone Number"
+                            name = "phone"
+                            value = {newFarm.phone}
+                            onChange = {(e) => setNewFarm({ ...newFarm, phone: e.target.value})}
+                        />
+                        <Input
+                            placeholder = "Email Address"
+                            name = "email"
+                            value = {newFarm.email}
+                            onChange = {(e) => setNewFarm({ ...newFarm, email: e.target.value})}
                         />
                         <Button colorScheme="blue" onClick={handleAddFarm} w="full">
                             Add Farm
