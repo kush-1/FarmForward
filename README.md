@@ -7,7 +7,7 @@ farmforward.club
 
 ## Team Members
 
-- **Nishchay Arjyal**: [Fullstack Developer, Project Leader, and Database Architect]
+- **Nishchay Arjyal**: [Fullstack Developer, Technical Lead, and Database Architect]
 - **Kush Desai**: [Fullstack Developer, Project Manager, and Branding Specialist]
 - **Nick Santone**: [Frontend Developer, UI/UX Strategist, and Debugging Specialist]
 - **James Park**: [Frontend Developer, Creative Lead, and Graphic Design Specialist]
